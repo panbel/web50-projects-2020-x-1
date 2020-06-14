@@ -1,0 +1,5 @@
+if __name__ == '__main__':
+    app.config['DATABASE_URL'] = "postgres://bjjphsnuxjabfm:0802b24ffd3e4d7a240cb35089d4969cd9b5e54cdfb8c6f45848fd18523764a3@ec2-54-247-94-127.eu-west-1.compute.amazonaws.com:5432/d74hfp6ao6b1hb"
+    #app.jinja_env.auto_reload = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.run(debug=True)

@@ -1,0 +1,580 @@
+.login-button {
+  border: none;
+  color: #080808;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #bdddbe;
+}
+
+.login-button:hover {
+  text-decoration: none;
+  font-size: 26px;
+  color: #f1eeee;
+}
+
+.register-button {
+  border: none;
+  color: #080808;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #a2cad8;
+}
+
+.register-button:hover {
+  text-decoration: none;
+  font-size: 26px;
+  color: #f1eeee;
+}
+
+#logo-and-name {
+  color: #747272;
+  font-size: 190%;
+  padding-left: 2ex;
+  font-family: 'Annie Use Your Telescope', cursive;
+}
+
+#logo-and-name:hover {
+  cursor: pointer;
+  color: #1f1e1e;
+}
+
+.basic_container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.main_title, .index_main_container .main_title {
+  font-size: 40pt;
+  font-family: 'Bad Script', cursive, Arial, Helvetica, sans-serif;
+}
+
+.login_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* establish flex container */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* make main axis vertical */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+}
+
+.login_container .login_form_container {
+  margin: 5px;
+  text-align: center;
+  /* will center text in <p>, which is not a flex item */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid;
+  border-width: 2px;
+  padding: 20px;
+  padding-bottom: -40px;
+  background-color: #eafaff;
+}
+
+.login_container .stuff_inside_form {
+  text-align: center;
+  justify-items: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login_container .login_button {
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 140%;
+  cursor: pointer;
+}
+
+.login_container .bottom_buttons_form {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: flex-end;
+}
+
+.login_container .bottom_buttons_form .login_form_extra_button {
+  font-family: 'Annie Use Your Telescope', cursive;
+  border-width: thin;
+  font-size: 110%;
+}
+
+.login_container .bottom_buttons_form .login_form_extra_button a {
+  text-decoration: none;
+  color: black;
+}
+
+.login_container .bottom_buttons_form .login_form_extra_button:hover {
+  background-color: #c7c4c4;
+  color: grey;
+  cursor: pointer;
+}
+
+.search_main_container {
+  position: relative;
+}
+
+.search_main_container .search_container {
+  background-image: url("https://images.techhive.com/images/article/2015/09/library-100616524-large.jpg");
+  height: 90.5vh;
+  width: 100%;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.search_main_container .search_text {
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.search_main_container .search_text .select_search_query {
+  font-size: 25pt;
+  font-family: 'Annie Use Your Telescope', cursive, Arial;
+}
+
+.search_main_container .search_text .select_search_query #choice:hover {
+  cursor: pointer;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.search_main_container .search_text .select_search_query .search_submit_button {
+  background-color: #b1e5f5;
+  color: white;
+  font-size: 30pt;
+  font-weight: 600;
+  border-radius: 30px 30px 30px 30px;
+  border-color: black;
+}
+
+.search_main_container .search_text .select_search_query .search_submit_button:hover {
+  font-weight: 70000;
+  background-color: white;
+  color: black;
+}
+
+.index_main_container {
+  height: 90.5vh;
+  background-image: url("https://d3tb2mkdocc4em.cloudfront.net/admissions/wp-content/uploads/sites/47/2016/03/people-coffee-notes-tea.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+}
+
+.index_main_container .index_sec_container {
+  color: white;
+  font-family: 'Annie Use Your Telescope', Helvetica, Arial, sans-serif;
+  font-size: 35;
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.index_main_container .main_title {
+  color: white;
+  font-size: 65pt;
+  text-shadow: 3px 3px #cecbcb;
+  position: absolute;
+  left: 40%;
+  margin-left: -45px;
+  top: 15%;
+  margin-top: -15px;
+}
+
+.search_button_container {
+  position: relative;
+  height: 90.5vh;
+  width: 100%;
+}
+
+.search_button_container .search_button {
+  position: absolute;
+  left: 42%;
+  margin-left: -35px;
+  top: 55%;
+  margin-top: -50px;
+  font-family: 'Annie Use Your Telescope', cursive, Arial;
+  font-size: 35pt;
+  border-color: black;
+  background-color: lemonchiffon;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.search_button_container .search_button a {
+  text-decoration: none;
+  color: black;
+}
+
+.search_button_container .search_button:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.search_button_container .search_button:hover a {
+  font-weight: 600;
+}
+
+.login_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* establish flex container */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* make main axis vertical */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+}
+
+.login_container .login_form_container {
+  margin: 5px;
+  text-align: center;
+  /* will center text in <p>, which is not a flex item */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid;
+  border-width: 2px;
+  padding: 20px;
+  padding-bottom: -40px;
+  background-color: #eafaff;
+}
+
+.login_container .stuff_inside_form {
+  text-align: center;
+  justify-items: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login_container .login_button {
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 140%;
+  cursor: pointer;
+}
+
+.login_container .bottom_buttons_form {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: flex-end;
+}
+
+.login_container .bottom_buttons_form .login_form_extra_button {
+  font-family: 'Annie Use Your Telescope', cursive;
+  border-width: thin;
+  font-size: 110%;
+}
+
+.login_container .bottom_buttons_form .login_form_extra_button a {
+  text-decoration: none;
+  color: black;
+}
+
+.login_container .bottom_buttons_form .login_form_extra_button:hover {
+  background-color: #c7c4c4;
+  color: grey;
+  cursor: pointer;
+}
+
+.account_main_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* establish flex container */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* make main axis vertical */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+}
+
+.account_main_container .account_form_container {
+  margin: 5px;
+  text-align: center;
+  /* will center text in <p>, which is not a flex item */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid;
+  border-width: 2px;
+  padding: 60px;
+  padding-bottom: -40px;
+  font-size: 180%;
+  font-family: 'Bad Script', cursive, Arial, Helvetica, sans-serif;
+  background-color: #eafaff;
+}
+
+.account_main_container .stuff_inside_form {
+  text-align: center;
+  justify-items: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.account_main_container .change_password {
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 20pt;
+  padding: 5px;
+  cursor: pointer;
+  border-color: black;
+  background-color: lemonchiffon;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.account_main_container .change_password a {
+  text-decoration: none;
+  color: black;
+}
+
+.account_main_container .change_password:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.account_main_container .change_password:hover a {
+  font-weight: 600;
+}
+
+.book_query_container {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* establish flex container */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* make main axis vertical */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.book_query_container .query_list {
+  text-align: center;
+  /* will center text in <p>, which is not a flex item */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #eafaff;
+}
+
+.book_query_container .query_list .query_item {
+  font-family: 'Annie Use Your Telescope', cursive, Arial;
+  font-size: 25pt;
+  margin: 0 0 0 13px;
+  /* to correct for the overflow of the numbers outside of div */
+}
+
+.book_query_container .query_list .query_item a {
+  color: black;
+}
+
+.book_query_container .query_list .query_item a:hover {
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.book_details_container {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* establish flex container */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* make main axis vertical */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* center items vertically, in this case */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18pt;
+}
+
+.book_details_container .book_info {
+  text-align: center;
+  /* will center text in <p>, which is not a flex item */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #eafaff;
+}
+
+.book_details_container .secondary_title {
+  font-size: 35pt;
+  font-family: 'Annie Use Your Telescope', cursive, Arial;
+  color: black;
+}
+
+.book_details_container .fieldset_container {
+  text-align: center;
+  /* will center text in <p>, which is not a flex item */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25pt;
+  font-family: 'Annie Use Your Telescope', cursive, Arial;
+}
+
+.book_details_container .fieldset_container .choose_rating {
+  font-size: 20pt;
+  font-family: 'Annie Use Your Telescope', cursive, Arial;
+}
+
+.book_details_container .fieldset_container .choose_rating .star_choice:hover {
+  cursor: pointer;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.book_details_container .fieldset_container .submit_review_button {
+  background-color: #b1e5f5;
+  color: white;
+  font-size: 30pt;
+  font-weight: 600;
+  border-radius: 30px 30px 30px 30px;
+  border-color: black;
+}
+
+.book_details_container .fieldset_container .submit_review_button:hover {
+  font-weight: 700;
+  background-color: white;
+  color: black;
+}
+
+.book_details_container .other_reviews {
+  text-align: center;
+  /* will center text in <p>, which is not a flex item */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.book_details_container .other_reviews .individual_review {
+  background-color: white;
+  font-size: 20pt;
+  font-family: 'Annie Use Your Telescope', cursive, Arial;
+  border-color: black;
+  padding: 5px;
+  border-bottom: dotted;
+}
+/*# sourceMappingURL=style.css.map */

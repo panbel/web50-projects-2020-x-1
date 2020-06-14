@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: Home
+{% endblock %}
+
+{% block main %}
+    <body class="actual_container">
+        <div class="index_main_container">
+            <div class="title_container"><h1 class="main_title" style="font-weight: 700;">Book Reviewer</h1></div>
+            <div class="index_sec_container">
+                {% if error %}
+                    <p class=error> {{ error }}</p>
+                {% endif %}
+                <ol>
+                    <h3>1) Find information about any book!</h3>
+                    <h3>2) Express your opinion about any book!</h3>
+                </ol>
+                <a class="login-button" href={{ url_for('login') }}>Login!</a>
+                <a class="register-button" href={{ url_for('register') }}>Register!</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: Home
+{% endblock %}
+
+{% block main %}
+    <body class="actual_container">
+        {% if error %}
+            <p class=error>{{ error }}</p>
+        {% endif %}
+        <div>
+            <a class="login-button" href={{ url_for('login') }}>Login!</a>
+            <a class="register-button" href={{ url_for('register') }}>Register!</a>
+        </div>
+    </body>
+{% endblock %}

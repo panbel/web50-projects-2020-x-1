@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: Search
+{% endblock %}
+
+{% block main %}
+    <body class="actual_container">
+        <div class="search_main_container">
+            <div class="search_container"></div>
+            <div class="search_text">
+                <h1 class="main_title">Search!</h1>
+                    <form action="{{ url_for('search') }}" method="POST">
+                        {% if error %}
+                            <p class=error><strong></strong> {{ error }}</p>
+                        {% endif %}
+                        <div class="select_search_query">
+                            <p>I want to search a book by it's:</p>
+                            {# <label for="choice">I want to search a book by it's:</label> #}
+                            <select id="choice" name="choice"  onchange="showDiv('hidden_div', this)">
+                                <option value="" selected disabled hidden>Choose here</option>
+                                <option value="ISBN">ISBN number</option>
+                                <option value="title">Book title</option>
+                                <option value="author">Book author</option>
+                            </select>
+                            <script>
+                                function showDiv(divId, element)
+                                {
+                                    document.getElementById(divId).style.display = element.value != "" ? 'block' : 'none';
+                                }
+                            </script>
+                            <div id="hidden_div" style="display: none; padding-top: 20px">
+                                <input class="search_input_text" type="text" autocomplete="off" name="search_input" placeholder="Enter text here."></p>
+                                <input class="search_submit_button" type="submit" value="Search!">
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,452 @@
+// @font-face {
+//     font-family: 'Amatic SC';
+//     src: url("/fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+//     // src: url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");Bad Script
+// }
+
+
+.login-button {
+    border: none;
+    color: rgb(8, 8, 8);
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #bdddbe;
+    &:hover{
+        text-decoration: none;
+        font-size: 26px;
+        color: rgb(241, 238, 238)
+    }
+}
+
+.register-button {
+    border: none;
+    color: rgb(8, 8, 8);
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #a2cad8;
+    &:hover{
+        text-decoration: none;
+        font-size: 26px;
+        color: rgb(241, 238, 238)
+    }
+}
+
+#logo-and-name {
+    color: rgb(116, 114, 114);
+    font-size: 190%;
+    padding-left: 2ex;
+    font-family: 'Annie Use Your Telescope', cursive;
+    &:hover {
+    cursor: pointer;
+    color: rgb(31, 30, 30);
+    }
+}
+
+.basic_container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.main_title{
+    font-size: 40pt;
+    font-family: 'Bad Script', cursive, Arial, Helvetica, sans-serif;
+}
+
+.login_container{
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    height: 90vh;
+    .login_form_container{
+        margin: 5px;
+        text-align: center;     /* will center text in <p>, which is not a flex item */
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center; 
+        border-style: solid;
+        border-width: 2px;
+        padding: 20px;
+        padding-bottom: -40px;
+        background-color: rgb(234, 250, 255);
+    }
+    .stuff_inside_form{
+        text-align: center; 
+        justify-items: center; /* center items vertically, in this case */
+        align-items: center;
+    }
+    .login_button{
+        font-family: 'Annie Use Your Telescope', cursive;
+        font-size: 140%;
+        cursor: pointer;
+    }
+    .bottom_buttons_form{
+        padding-top: 20px;
+        display: flex;
+        text-align: center;
+        flex-direction: column; 
+        justify-items: flex-end;
+        .login_form_extra_button {
+            font-family: 'Annie Use Your Telescope', cursive;
+            border-width: thin;
+            font-size: 110%;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            &:hover{
+                background-color: rgb(199, 196, 196);
+                color: grey;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.search_main_container{
+    position: relative;
+    .search_container{
+        background-image: url("https://images.techhive.com/images/article/2015/09/library-100616524-large.jpg");
+        height: 90.5vh;
+        width: 100%;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .search_text {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+        .select_search_query {
+            font-size: 25pt;
+            font-family: 'Annie Use Your Telescope', cursive, Arial;
+            #choice {
+                &:hover{
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-style: italic;
+                }
+            }
+            .search_submit_button {
+                background-color: rgb(177, 229, 245);
+                color: white;
+                font-size: 30pt;
+                font-weight: 600;
+                border-radius: 30px 30px 30px 30px;
+                border-color: black;
+                &:hover {
+                    font-weight: 70000;
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+    
+}
+
+.index_main_container{
+    height: 90.5vh;
+    background-image: url("https://d3tb2mkdocc4em.cloudfront.net/admissions/wp-content/uploads/sites/47/2016/03/people-coffee-notes-tea.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    // display: flex;   
+    // text-align: center;
+    // justify-content: center; /* center items vertically, in this case */
+    // align-items: center;        /* establish flex container */
+    .index_sec_container{
+        color:white;
+        font-family: 'Annie Use Your Telescope', Helvetica, Arial, sans-serif;
+        font-size: 35;
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+    .main_title{
+        @extend .main_title;
+        color:white;
+        font-size: 65pt;
+        text-shadow: 3px 3px #cecbcb;
+        position: absolute;
+        left: 40%;
+        margin-left: -45px;
+        top: 15%;
+        margin-top: -15px;
+    }
+}
+
+.search_button_container{
+    position: relative;
+    height: 90.5vh;
+    width: 100%;  
+    .search_button{
+        position: absolute;
+        left: 42%;
+        margin-left: -35px;
+        top: 55%;
+        margin-top: -50px;
+        font-family: 'Annie Use Your Telescope', cursive, Arial;
+        font-size: 35pt;
+        border-color: black;
+        background-color: lemonchiffon;
+        border-radius: 30px 30px 30px 30px;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        &:hover{
+            cursor: pointer;
+            background-color: white;
+            a{
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.login_container{
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    height: 90vh;
+    .login_form_container{
+        margin: 5px;
+        text-align: center;     /* will center text in <p>, which is not a flex item */
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center; 
+        border-style: solid;
+        border-width: 2px;
+        padding: 20px;
+        padding-bottom: -40px;
+        background-color: rgb(234, 250, 255);
+    }
+    .stuff_inside_form{
+        text-align: center; 
+        justify-items: center; /* center items vertically, in this case */
+        align-items: center;
+    }
+    .login_button{
+        font-family: 'Annie Use Your Telescope', cursive;
+        font-size: 140%;
+        cursor: pointer;
+    }
+    .bottom_buttons_form{
+        padding-top: 20px;
+        display: flex;
+        text-align: center;
+        flex-direction: column; 
+        justify-items: flex-end;
+        .login_form_extra_button {
+            font-family: 'Annie Use Your Telescope', cursive;
+            border-width: thin;
+            font-size: 110%;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            &:hover{
+                background-color: rgb(199, 196, 196);
+                color: grey;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.account_main_container{
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    height: 90vh;
+    .account_form_container{
+        margin: 5px;
+        text-align: center;     /* will center text in <p>, which is not a flex item */
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center; 
+        border-style: solid;
+        border-width: 2px;
+        padding: 60px;
+        padding-bottom: -40px;
+        font-size: 180%;
+        font-family: 'Bad Script', cursive, Arial, Helvetica, sans-serif;
+        background-color: rgb(234, 250, 255);
+    }
+    .stuff_inside_form{
+        text-align: center; 
+        justify-items: center; /* center items vertically, in this case */
+        align-items: center;
+    }
+    .change_password{
+        font-family: 'Annie Use Your Telescope', cursive;
+        font-size: 20pt;
+        padding: 5px;
+        cursor: pointer;
+        border-color: black;
+        background-color: lemonchiffon;
+        border-radius: 30px 30px 30px 30px;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        &:hover{
+            cursor: pointer;
+            background-color: white;
+            a{
+                font-weight: 600;
+            }
+        }
+    }
+    // .bottom_buttons_form{
+    //     padding-top: 20px;
+    //     display: flex;
+    //     text-align: center;
+    //     flex-direction: column; 
+    //     justify-items: flex-end;
+    //     .login_form_extra_button {
+    //         font-family: 'Annie Use Your Telescope', cursive;
+    //         border-width: thin;
+    //         font-size: 110%;
+    //         a {
+    //             text-decoration: none;
+    //             color: black;
+    //         }
+    //         &:hover{
+    //             background-color: rgb(199, 196, 196);
+    //             color: grey;
+    //             cursor: pointer;
+    //         }
+    //     }
+    // }
+}
+
+.book_query_container {
+    height: auto;
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    .query_list {
+        text-align: center;     /* will center text in <p>, which is not a flex item */
+        justify-content: center; /* center items vertically, in this case */
+        align-items: center; 
+        border-style: solid;
+        border-width: 2px;
+        background-color: rgb(234, 250, 255);
+        .query_item {
+            font-family: 'Annie Use Your Telescope', cursive, Arial;
+            font-size: 25pt;
+            margin:0 0 0 13px;  /* to correct for the overflow of the numbers outside of div */
+            a {
+                color: black;
+                &:hover{
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-style: italic;
+                    }
+            }
+        }
+    }
+}
+
+.book_details_container {
+    height: auto;
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;
+    font-size: 18pt;
+    .book_info {
+        text-align: center;     /* will center text in <p>, which is not a flex item */
+        // justify-content: center; /* center items vertically, in this case */
+        align-items: center; 
+        border-style: solid;
+        border-width: 2px;
+        background-color: rgb(234, 250, 255);
+    }
+    .secondary_title {
+        font-size: 35pt;
+        font-family: 'Annie Use Your Telescope', cursive, Arial;
+        color: black;
+    }
+    .fieldset_container {
+        text-align: center;     /* will center text in <p>, which is not a flex item */
+        align-items: center; 
+        font-size: 25pt;
+        font-family: 'Annie Use Your Telescope', cursive, Arial;
+        .choose_rating {
+            font-size: 20pt;
+            font-family: 'Annie Use Your Telescope', cursive, Arial;
+            .star_choice {
+                &:hover{
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-style: italic;
+                }
+            }
+        }
+        .submit_review_button {
+            background-color: rgb(177, 229, 245);
+            color: white;
+            font-size: 30pt;
+            font-weight: 600;
+            border-radius: 30px 30px 30px 30px;
+            border-color: black;
+            &:hover {
+                font-weight: 700;
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+    .other_reviews {
+        text-align: center;     /* will center text in <p>, which is not a flex item */
+        align-items: center; 
+        border-style: solid;
+        border-width: 2px;
+        .individual_review{
+            background-color: white;
+            font-size: 20pt;
+            font-family: 'Annie Use Your Telescope', cursive, Arial;
+            border-color: black;
+            padding:5px;
+            border-bottom: dotted;
+        }
+    }
+}

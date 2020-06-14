@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: Home
+{% endblock %}
+
+{% block main %}
+    {% if error %}
+        <p class=error> {{ error }}</p>
+    {% endif %}
+    <body class="actual_container">
+    <div class="index_main_container">
+    <div class="title_container"><h1 class="main_title">Welcome {{ g.user[0] }}!</h1></div>
+        <div class="search_button_container">
+            <button class="search_button"><a href={{ url_for('search') }}>Search for a book</a></button>
+        </div>
+    </body>
+{% endblock %}

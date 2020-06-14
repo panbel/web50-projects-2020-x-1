@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: Search Results
+{% endblock %}
+
+{% block main %}
+    <body class="actual_container">
+    <div class="book_query_container">
+        <h1 class="main_title" style="padding-top: 20px">Search Results</h1>
+        <ol class="query_list">
+        {% for book in query %}
+            <li class="query_item">
+                <a href="{{ url_for('book_details', book_title=book[1]) }}">{{ book[1] }}</a>
+                <!--<p>ISBN: {{ book[0] }}, Author: {{ book[2] }}, Year: {{ book[3] }}</p>-->
+            </li>
+        {% endfor %}
+        </ol>
+    </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: Book Details
+{% endblock %}
+
+{% block main %}
+    <body class="actual_container">
+    <div class="book_details_container">
+        <h1 class="main_title" style="padding-top: 30px">Book information for: {{ basic_book_details[1] }}</h1>  <!--title-->
+        <p style="padding-top: 30px"></p>
+        <div class="book_info" style="padding: 30px;">
+            <p>ISBN: {{ basic_book_details[0] }}</p>
+            <p>Author: {{ basic_book_details[2] }}</p>
+            <p>Year: {{ basic_book_details[3] }}</p>
+            <p>Average rating: {{ advanced_details["books"][0]["average_rating"] }}/5</p>
+            <p>Number of reviews received: {{ advanced_details["books"][0]["work_ratings_count"] }}</p>
+        </div>
+        <p style="padding-top: 30px"></p>
+
+        <h3 class="secondary_title">Submit a review</h3>
+        <div class="fieldset_container">
+        <fieldset>
+            <form action="{{ url_for('book_details', book_title=basic_book_details[1]) }}" method="POST">
+                {# <label for="rating">Rating:</label> #}
+                <div class="choose_rating">
+                    Rating:
+                    <select class="star_choice" name="rating" required class="choose_rating">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="1/5">1 star</option>
+                        <option value="2/5">2 star</option>
+                        <option value="3/5">3 star</option>
+                        <option value="4/5">4 star</option>
+                        <option value="5/5">5 star</option>
+                    </select><br>
+                </div>
+                <p style="padding-top: 10px"></p>
+                <textarea name="opinion" placeholder="Write your book review here."rows="12" cols="30"></textarea><br>
+                <input class="submit_review_button" type="submit" value="Submit!">
+            </form>
+        </fieldset>
+        </div>
+        <p style="padding-top: 20px"></p>
+        <h3 class="secondary_title">Reviews from other people</h3>
+        <div class="other_reviews">
+            {% for review in reviews %}
+            <div class="individual_review">
+                <p>User "{{ review[0] }}" rated the book with {{review[1] }}.</p>
+                {# If the reviewer wrote a review.. include it #}
+                <div>
+                    {% if review[2] %}
+                        <p>"{{ review[2] }}"</p>  
+                    {% endif %} 
+                </div>
+                <p style="font-size:13pt">{{ review[3] }}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    </body>
+{% endblock %}
